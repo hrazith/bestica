@@ -1,0 +1,8 @@
+@font-face {
+	font-family: "HelveticaNeueW01-55Roma";
+	src: url("b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot");
+	src: url("b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot#iefix") format("embedded-opentype"),
+	url("bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"),
+	url("b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"),
+	url("da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#HelveticaNeueW01-55Roma") format("svg");
+}
