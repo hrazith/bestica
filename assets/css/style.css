@@ -1,5 +1,7 @@
 @import url(font-awesome.min.css);
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+@import url(fonts.css);
+/*@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
+*/
 /*
 	Spectral by HTML5 UP
 	html5up.net | @n33co
@@ -2348,14 +2350,16 @@ body.is-menu-visible #menu {
       #header nav > ul > li {
         display: inline-block;
         padding: 0; }
+        @media screen and (max-width: 736px) {
+          #header nav > ul > li.atlarge {
+            display: none; } }
         #header nav > ul > li > a {
           border: 0;
           color: #5e5e5e;
           display: block;
           font-size: 0.8em;
-          letter-spacing: 0.225em;
           padding: 0 1.5em;
-          text-transform: uppercase; }
+          font-weight: 300; }
           #header nav > ul > li > a.menuToggle {
             outline: 0;
             position: relative; }

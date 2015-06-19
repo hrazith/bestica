@@ -3,8 +3,9 @@
 @import 'mixins';
 @import 'skel-layout';
 @import 'font-awesome.min.css';
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
-
+@import 'fonts.css';
+/*@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
+*/
 /*
 	Spectral by HTML5 UP
 	html5up.net | @n33co
@@ -1418,14 +1419,19 @@
 					display: inline-block;
 					padding: 0;
 
+					&.atlarge {
+						@include breakpoint(small) {
+							display: none;
+						}
+					}
+
 					> a {
 						border: 0;
 						color: _palette(fg-bold);
 						display: block;
 						font-size: 0.8em;
-						letter-spacing: _size(letter-spacing-alt);
 						padding: 0 1.5em;
-						text-transform: uppercase;
+						font-weight: 300;
 
 						&.menuToggle {
 							outline: 0;
