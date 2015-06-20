@@ -1495,8 +1495,8 @@
 		text-align: center;
 
 		h2 {
-			@include vendor('transform', 'scale(1)');
-			@include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
+			/*@include vendor('transform', 'scale(1)');
+			@include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));*/
 			display: inline-block;
 			font-size: 1.75em;
 			opacity: 1;
@@ -1505,8 +1505,8 @@
 			z-index: 1;
 
 			&:before, &:after {
-				@include vendor('transition', 'width 0.85s ease');
-				@include vendor('transition-delay', '0.25s');
+				/*@include vendor('transition', 'width 0.85s ease');
+				@include vendor('transition-delay', '0.25s');*/
 				background: _palette(fg-bold);
 				content: '';
 				display: block;
@@ -1562,9 +1562,9 @@
 		}
 
 		.more {
-			@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
+			/*@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
 			@include vendor('transition-delay', '3.5s');
-			@include vendor('transform', 'translateY(0)');
+			@include vendor('transform', 'translateY(0)'); */
 			border: none;
 			bottom: 0;
 			color: #ed4933;
@@ -1599,9 +1599,9 @@
 		}
 
 		&:after {
-			@include vendor('pointer-events', 'none');
+			/*@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-			@include vendor('transition-delay', '1.25s');
+			@include vendor('transition-delay', '1.25s');*/
 			content: '';
 			background: _palette(bg);
 			display: block;

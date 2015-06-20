@@ -2413,14 +2413,8 @@ body.is-menu-visible #menu {
   position: relative;
   text-align: center; }
   #banner h2 {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
-    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
-    -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    /*@include vendor('transform', 'scale(1)');
+    @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));*/
     display: inline-block;
     font-size: 1.75em;
     opacity: 1;
@@ -2428,14 +2422,8 @@ body.is-menu-visible #menu {
     position: relative;
     z-index: 1; }
     #banner h2:before, #banner h2:after {
-      -moz-transition: width 0.85s ease;
-      -webkit-transition: width 0.85s ease;
-      -ms-transition: width 0.85s ease;
-      transition: width 0.85s ease;
-      -moz-transition-delay: 0.25s;
-      -webkit-transition-delay: 0.25s;
-      -ms-transition-delay: 0.25s;
-      transition-delay: 0.25s;
+      /*@include vendor('transition', 'width 0.85s ease');
+      @include vendor('transition-delay', '0.25s');*/
       background: #5e5e5e;
       content: '';
       display: block;
@@ -2474,18 +2462,9 @@ body.is-menu-visible #menu {
       width: 100%;
       font-size: 12px; }
   #banner .more {
-    -moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
-    -webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
-    -ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
-    transition: transform 0.75s ease, opacity 0.75s ease;
-    -moz-transition-delay: 3.5s;
-    -webkit-transition-delay: 3.5s;
-    -ms-transition-delay: 3.5s;
-    transition-delay: 3.5s;
-    -moz-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
+    /*@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
+    @include vendor('transition-delay', '3.5s');
+    @include vendor('transform', 'translateY(0)'); */
     border: none;
     bottom: 0;
     color: #ed4933;
@@ -2516,18 +2495,9 @@ body.is-menu-visible #menu {
       position: absolute;
       width: 1.5em; }
   #banner:after {
-    -moz-pointer-events: none;
-    -webkit-pointer-events: none;
-    -ms-pointer-events: none;
-    pointer-events: none;
-    -moz-transition: opacity 3s ease-in-out;
-    -webkit-transition: opacity 3s ease-in-out;
-    -ms-transition: opacity 3s ease-in-out;
-    transition: opacity 3s ease-in-out;
-    -moz-transition-delay: 1.25s;
-    -webkit-transition-delay: 1.25s;
-    -ms-transition-delay: 1.25s;
-    transition-delay: 1.25s;
+    /*@include vendor('pointer-events', 'none');
+    @include vendor('transition', 'opacity 3s ease-in-out');
+    @include vendor('transition-delay', '1.25s');*/
     content: '';
     background: #fff;
     display: block;
