@@ -1106,7 +1106,6 @@ body, input, select, textarea {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 15pt;
   font-weight: 400;
-  letter-spacing: 0.075em;
   line-height: 1.65em; }
   @media screen and (max-width: 1680px) {
     body, input, select, textarea {
@@ -1116,15 +1115,13 @@ body, input, select, textarea {
       font-size: 12pt; } }
   @media screen and (max-width: 736px) {
     body, input, select, textarea {
-      font-size: 11pt;
-      letter-spacing: 0.0375em; } }
+      font-size: 11pt; } }
 
 a {
   -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
   -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
   -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
   transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  border-bottom: dotted 1px;
   color: inherit;
   text-decoration: none; }
   a:hover {
@@ -1143,10 +1140,8 @@ p {
 h1, h2, h3, h4, h5, h6 {
   color: #5e5e5e;
   font-weight: 800;
-  letter-spacing: 0.225em;
   line-height: 1em;
-  margin: 0 0 1em 0;
-  text-transform: uppercase; }
+  margin: 0 0 1em 0; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
     text-decoration: none; }
@@ -1207,7 +1202,6 @@ code {
   border-radius: 3px;
   font-family: "Courier New", monospace;
   font-size: 0.9em;
-  letter-spacing: 0;
   margin: 0 0.25em;
   padding: 0.25em 0.65em; }
 
@@ -1677,12 +1671,10 @@ button,
   font-size: 0.8em;
   font-weight: 600;
   height: 3.125em;
-  letter-spacing: 0.225em;
   line-height: 3.125em;
   padding: 0 2.75em;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
@@ -2268,10 +2260,8 @@ button,
         color: inherit;
         display: block;
         font-size: 0.8em;
-        letter-spacing: 0.225em;
         outline: 0;
-        text-decoration: none;
-        text-transform: uppercase; }
+        text-decoration: none; }
         @media screen and (max-width: 736px) {
           #menu ul > li > a {
             line-height: 3em; } }
@@ -2326,7 +2316,8 @@ body.is-menu-visible #menu {
     line-height: inherit;
     position: absolute;
     top: 0;
-    background: url("images/bestica-logo-alt.svg") no-repeat 0 0.5em; }
+    background: url("images/bestica-logo-alt.svg") no-repeat 0 0.5em;
+    letter-spacing: 0.425em; }
     #header h1 a {
       border: 0;
       display: block;
@@ -2382,15 +2373,6 @@ body.is-menu-visible #menu {
               padding: 0 0 0 1.5em; } }
         #header nav > ul > li:first-child {
           margin-left: 0; }
-  #header.alt {
-    background: url("images/bestica-logo-alt.svg") no-repeat 1.48em 0.6em;
-    background-size: auto 24px; }
-    #header.alt h1 {
-      -moz-pointer-events: none;
-      -webkit-pointer-events: none;
-      -ms-pointer-events: none;
-      pointer-events: none;
-      opacity: 0; }
 
 /* Banner */
 #banner {
@@ -2439,13 +2421,16 @@ body.is-menu-visible #menu {
   #banner h3 {
     font-size: 0.8em;
     padding: 0.35em 1em;
-    margin-bottom: .4em; }
+    margin-bottom: .4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.025em; }
   #banner p {
-    letter-spacing: 0.03em;
     line-height: 1.8em;
     padding: 0.8em 3em 0 3em;
-    font-size: .6em;
-    margin-bottom: 8em; }
+    font-size: .8em;
+    margin-bottom: 8em;
+    font-weight: 300; }
     #banner p a {
       color: inherit; }
   #banner .job-seeker {
@@ -2457,7 +2442,6 @@ body.is-menu-visible #menu {
     margin: 0;
     padding-top: 1em; }
     #banner .job-seeker p {
-      text-transform: none;
       text-align: center;
       width: 100%;
       font-size: 12px; }
@@ -2471,14 +2455,12 @@ body.is-menu-visible #menu {
     font-size: 0.8em;
     height: 6.5em;
     left: 50%;
-    letter-spacing: 0.225em;
     margin-left: -8.5em;
     opacity: 1;
     outline: 0;
     padding-left: 0.225em;
     position: absolute;
     text-align: center;
-    text-transform: uppercase;
     width: 16em;
     z-index: 1; }
     #banner .more:after {
@@ -2591,8 +2573,6 @@ body.is-loading #banner:after {
     margin: 0 0 0.5em 0; }
   #main > header p {
     color: inherit;
-    letter-spacing: 0.225em;
-    text-transform: uppercase;
     top: 0; }
     #main > header p a {
       color: inherit; }
@@ -2629,10 +2609,8 @@ body.is-mobile #main > header {
   #footer .copyright {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.8em;
-    letter-spacing: 0.225em;
     list-style: none;
-    padding: 0;
-    text-transform: uppercase; }
+    padding: 0; }
     #footer .copyright li {
       border-left: solid 1px rgba(255, 255, 255, 0.5);
       display: inline-block;

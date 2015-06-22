@@ -46,7 +46,6 @@
 		font-family: _font(family);
 		font-size: 15pt;
 		font-weight: _font(weight);
-		letter-spacing: _size(letter-spacing);
 		line-height: 1.65em;
 
 		@include breakpoint(xlarge) {
@@ -59,13 +58,11 @@
 
 		@include breakpoint(small) {
 			font-size: 11pt;
-			letter-spacing: _size(letter-spacing) * 0.5;
 		}
 	}
 
 	a {
 		@include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
-		border-bottom: dotted 1px;
 		color: inherit;
 		text-decoration: none;
 
@@ -90,10 +87,8 @@
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-extrabold);
-		letter-spacing: _size(letter-spacing-alt);
 		line-height: 1em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
-		text-transform: uppercase;
 
 		a {
 			color: inherit;
@@ -170,7 +165,6 @@
 		border-radius: 3px;
 		font-family: _font(family-fixed);
 		font-size: 0.9em;
-		letter-spacing: 0;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
 	}
@@ -811,12 +805,10 @@
 		font-size: 0.8em;
 		font-weight: _font(weight-bold);
 		height: 3.125em;
-		letter-spacing: _size(letter-spacing-alt);
 		line-height: 3.125em;
 		padding: 0 2.75em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -1321,10 +1313,8 @@
 					color: inherit;
 					display: block;
 					font-size: 0.8em;
-					letter-spacing: _size(letter-spacing-alt);
 					outline: 0;
 					text-decoration: none;
-					text-transform: uppercase;
 
 					@include breakpoint(small) {
 						line-height: 3em;
@@ -1388,6 +1378,7 @@
 			position: absolute;
 			top: 0;
 			background: url('images/bestica-logo-alt.svg') no-repeat 0 .5em;
+			letter-spacing: _size(letter-spacing-alt)+.2;
 
 			a {
 				border: 0;
@@ -1469,16 +1460,7 @@
 			}
 		}
 
-		&.alt {
-			//background: transparent;
-			background: url('images/bestica-logo-alt.svg') no-repeat 1.48em .6em;
-			background-size: auto 24px;
-
-			h1 {
-				@include vendor('pointer-events', 'none');
-				opacity: 0;
-			}
-		}
+		
 	}
 
 /* Banner */
@@ -1530,14 +1512,17 @@
 			font-size: 0.8em;
 			padding: 0.35em 1em;
 			margin-bottom: .4em;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: _size(letter-spacing-alt)-.2;
 		}
 
 		p {
-			letter-spacing: 0.03em;
-    			line-height: 1.8em;
+    		line-height: 1.8em;
 			padding: 0.8em 3em 0 3em;
-			font-size: .6em;
+			font-size: .8em;
 			margin-bottom: 8em;
+			font-weight: 300;
 
 			a {
 				color: inherit;
@@ -1553,7 +1538,6 @@
 			margin: 0;
 			padding-top: 1em;
 			p {
-				text-transform: none;
 				text-align: center;
 				width: 100%;
 				font-size: 12px;
@@ -1571,14 +1555,12 @@
 			font-size: 0.8em;
 			height: 6.5em;
 			left: 50%;
-			letter-spacing: _size(letter-spacing-alt);
 			margin-left: -8.5em;
 			opacity: 1;
 			outline: 0;
 			padding-left: _size(letter-spacing-alt);
 			position: absolute;
 			text-align: center;
-			text-transform: uppercase;
 			width: 16em;
 			z-index: 1;
 
@@ -1720,8 +1702,6 @@
 
 			p {
 				color: inherit;
-				letter-spacing: _size(letter-spacing-alt);
-				text-transform: uppercase;
 				top: 0;
 
 				a {
@@ -1782,10 +1762,8 @@
 		.copyright {
 			color: _palette(fg-light);
 			font-size: 0.8em;
-			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
 			padding: 0;
-			text-transform: uppercase;
 
 			li {
 				border-left: solid 1px _palette(fg-light);
