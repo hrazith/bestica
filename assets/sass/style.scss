@@ -227,9 +227,7 @@
 			margin: 0 0 (_size(element-margin) * 1.75) 0;
 
 			h2, h3, h4, h5, h6 {
-				border-bottom: solid 2px _palette(border);
-				display: inline-block;
-				padding-bottom: 1em;
+				
 				position: relative;
 
 				&:after {
@@ -255,6 +253,102 @@
 			}
 		}
 	}
+
+/* Home-Jobs */
+
+.home-jobs {
+	header {
+		text-align: center;
+		h2 {
+			font-weight: bold;
+			font-size: 1.8em;
+			margin: 0 0 13px 0;
+			color: _palette(bestica, bg);
+			opacity: 0.9;
+		}
+		p {
+			font-weight: 300;
+			font-size: 1.2em;
+			color: _palette(bestica, bg);
+			opacity: 0.8;
+		}
+	}
+}
+
+.jobs {
+
+	.item-info {
+		position: relative;
+		padding: 20px 10px 10px 20px;
+		border-bottom: 1px solid rgba(255,255,255,0.2);;
+
+
+		.item-title {
+			color: _palette(bestica, bg);
+			font-weight: bold;
+			font-size: 1em;
+			margin: 0;
+		}
+		.item-desc {
+			font-size: 0.8em;
+
+		}
+		.item-meta {
+			position: absolute;
+			right: 30px;
+			top:32px;
+			font-size: 0.8em;
+		}
+		&:hover {
+			background: rgba(255,255,255,0.6);
+			color: _palette(bestica, fg);
+			cursor: pointer;
+			h4 {
+				color: black;
+			}
+		}
+	}
+
+}
+
+/* Home-Resume */
+
+#resume {
+	height: 482px;
+	@include breakpoint(small) {
+		height: 282px;
+	}
+	.content {
+		text-align: center;
+
+		h2 {
+			font-weight: bold;
+			font-size: 1.8em;
+			margin: 0;
+			color: _palette(bestica, bg);
+			opacity: 0.9;
+		}
+		p {
+			font-weight: 300;
+			font-size: 0.9em;
+			color: _palette(bestica, bg);
+			opacity: 0.8;
+		}
+
+		.upload-form-container {
+			margin: 0 auto;
+			width: 70%
+
+		}
+	}
+
+	#resume-file-name {
+		background-color: _palette(bestica, bg);
+
+	}
+	
+}
+
 
 /* Form */
 
@@ -842,12 +936,13 @@
 		}
 
 		&.special {
-			background-color: _palette(accent6, bg);
+			background-color: _palette(bestica, accent);
 			box-shadow: none !important;
-			color: _palette(accent6, fg-bold) !important;
+			color: _palette(bestica, bg) !important;
+			margin-top: 30px;
 
 			&:hover {
-				background-color: lighten(_palette(accent6, bg), 5) !important;
+				background-color: lighten(_palette(bestica, accent), 6) !important;
 			}
 
 			&:active {
@@ -960,7 +1055,7 @@
 		}
 
 		.content {
-			@include padding(2em, 4em);
+			@include padding(4em, 4em);
 			@include vendor('order', '2');
 			max-width: 48em;
 			width: 60%;
@@ -1232,11 +1327,13 @@
 		}
 
 		&.style2 {
-			background-color: _palette(bg);
+			background-color: _palette(bestica, accent);
 		}
 
 		&.style3 {
-			@include wrapper(accent5);
+			@include wrapper(accent1);
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6))', 'url("../../images/resume-bg.jpg")'));
+			
 		}
 
 		&.style4 {
@@ -1424,6 +1521,10 @@
 						padding: 0 1.5em;
 						font-weight: 300;
 
+						&:hover {
+							color: _palette(bestica,accent);
+						}
+
 						&.menuToggle {
 							outline: 0;
 							position: relative;
@@ -1531,7 +1632,7 @@
 
 		.job-seeker {
 			background: _palette(accent4, bg);
-			height: 8em;
+			height: 5em;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
@@ -1539,46 +1640,25 @@
 			padding-top: 1em;
 			p {
 				text-align: center;
+				font-size: 0.8em;
 				width: 100%;
-				font-size: 12px;
+				.more {
+					background: _palette(bestica, accent);
+					color: #ffffff;
+					font-size: 0.9em;
+					height: 2em;
+					border-radius: 4px;
+					text-align: center;
+					padding: 0.5em 1em;
+					z-index: 1;
+					margin-left: 0.8em;
+				}
+
 
 			}
 		}
 
-		.more {
-			/*@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
-			@include vendor('transition-delay', '3.5s');
-			@include vendor('transform', 'translateY(0)'); */
-			border: none;
-			bottom: 0;
-			color: #ed4933;
-			font-size: 0.8em;
-			height: 6.5em;
-			left: 50%;
-			margin-left: -8.5em;
-			opacity: 1;
-			outline: 0;
-			padding-left: _size(letter-spacing-alt);
-			position: absolute;
-			text-align: center;
-			width: 16em;
-			z-index: 1;
 
-			&:after {
-				background-image: url('images/arrow.svg');
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				bottom: 2em;
-				content: '';
-				display: block;
-				height: 1.5em;
-				left: 50%;
-				margin: 0 0 0 -0.75em;
-				position: absolute;
-				width: 1.5em;
-			}
-		}
 
 		&:after {
 			/*@include vendor('pointer-events', 'none');
@@ -1747,6 +1827,26 @@
 		background-color: darken(_palette(bg), 8);
 		text-align: center;
 
+		.site-map {
+
+			li {
+				display: inline-block;
+				font-size: 0.7em;
+				letter-spacing: 0.02em;
+				padding-left: 2em;
+
+				a{
+					color: _palette(fg-light);
+					font-weight: 300;
+
+					&:hover {
+						color: _palette(bestica,accent);
+					}
+				}
+
+			}
+		}
+
 		.icons {
 			font-size: 1.25em;
 
@@ -1754,7 +1854,7 @@
 				color: _palette(fg-light);
 
 				&:hover {
-					color: _palette(fg);
+					color: _palette(bestica,accent);
 				}
 			}
 		}
