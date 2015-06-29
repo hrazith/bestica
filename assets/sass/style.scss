@@ -289,21 +289,22 @@
 			font-size: 1em;
 			margin: 0;
 		}
-		.item-desc {
+		.item-desc, .item-meta {
 			font-size: 0.8em;
+			color: #fff;
+			opacity: 0.7;
 
 		}
 		.item-meta {
 			position: absolute;
 			right: 30px;
 			top:32px;
-			font-size: 0.8em;
 		}
 		&:hover {
 			background: rgba(255,255,255,0.6);
 			color: _palette(bestica, fg);
 			cursor: pointer;
-			h4 {
+			h4, .item-desc, .item-meta {
 				color: black;
 			}
 		}
@@ -347,6 +348,17 @@
 
 	}
 	
+}
+
+
+#community {
+	h2 {
+		color:#fff;
+	}
+	p {
+		color:#fff;
+		opacity: 0.6;
+	}
 }
 
 
@@ -1327,13 +1339,16 @@
 		}
 
 		&.style2 {
-			background-color: _palette(bestica, accent);
+			background-color: rgba(239,104,48,0.9)	
 		}
 
 		&.style3 {
 			@include wrapper(accent1);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6))', 'url("../../images/resume-bg.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4))', 'url("../../images/resume-bg.jpg")'));
 			
+		}
+		&.style6 {
+			background-color: rgba(0,0,0,0.8);
 		}
 
 		&.style4 {
@@ -1932,6 +1947,10 @@
 
 
 
+
+
+
+
 /* Page Specific */
 .page-subtext {
 	color: #a9a9a9;
@@ -1939,17 +1958,31 @@
 	line-height: 1.7em;
 }
 
-.ux-cols, .it-cols {
+.ux-cols, .it-cols, .govt-cols {
 	p {
+		padding-bottom: 2em;
+	}
+	li {
+		list-style-type: circle;
+	}
+	p, li {
 		font-size: 0.8em;
 		font-weight: 300;
 		line-height: 1.8em;
-		padding-bottom: 2em;
+	}
+	.page-subtext {
+		font-size: 1.2em;
 	}
 }
 
 .ux-cols { h3 { color: #29995e !important;} }
 .it-cols { h3 { color: #484977 !important;} }
+.govt-cols { h3, h5 { color: #299499 !important;} }
+
+
+
+
+
 
 
 /* Footer */

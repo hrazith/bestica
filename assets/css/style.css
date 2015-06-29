@@ -1281,18 +1281,19 @@ header.major {
     font-weight: bold;
     font-size: 1em;
     margin: 0; }
-  .jobs .item-info .item-desc {
-    font-size: 0.8em; }
+  .jobs .item-info .item-desc, .jobs .item-info .item-meta {
+    font-size: 0.8em;
+    color: #fff;
+    opacity: 0.7; }
   .jobs .item-info .item-meta {
     position: absolute;
     right: 30px;
-    top: 32px;
-    font-size: 0.8em; }
+    top: 32px; }
   .jobs .item-info:hover {
     background: rgba(255, 255, 255, 0.6);
     color: #2e2e2e;
     cursor: pointer; }
-    .jobs .item-info:hover h4 {
+    .jobs .item-info:hover h4, .jobs .item-info:hover .item-desc, .jobs .item-info:hover .item-meta {
       color: black; }
 
 /* Home-Resume */
@@ -1319,6 +1320,12 @@ header.major {
       width: 70%; }
   #resume #resume-file-name {
     background-color: #ffffff; }
+
+#community h2 {
+  color: #fff; }
+#community p {
+  color: #fff;
+  opacity: 0.6; }
 
 /* Form */
 form {
@@ -2080,14 +2087,14 @@ button,
       .wrapper.style1 .features li {
         border-top-color: rgba(0, 0, 0, 0.125); } }
   .wrapper.style2 {
-    background-color: #ef6830; }
+    background-color: rgba(239, 104, 48, 0.9); }
   .wrapper.style3 {
     background-color: #ef6830;
     color: #fbd9cb;
-    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../images/resume-bg.jpg");
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../images/resume-bg.jpg");
-    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../images/resume-bg.jpg");
-    background-image: linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../images/resume-bg.jpg"); }
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../images/resume-bg.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../images/resume-bg.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../images/resume-bg.jpg");
+    background-image: linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../images/resume-bg.jpg"); }
     .wrapper.style3 strong, .wrapper.style3 b {
       color: #ffffff; }
     .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
@@ -2172,6 +2179,8 @@ button,
     @media screen and (max-width: 736px) {
       .wrapper.style3 .features li {
         border-top-color: rgba(0, 0, 0, 0.125); } }
+  .wrapper.style6 {
+    background-color: rgba(0, 0, 0, 0.8); }
   .wrapper.style4 {
     background-color: transparent; }
   .wrapper.style5 {
@@ -2734,17 +2743,25 @@ body.is-mobile #main > header {
   font-size: 1.2em;
   line-height: 1.7em; }
 
-.ux-cols p, .it-cols p {
+.ux-cols p, .it-cols p, .govt-cols p {
+  padding-bottom: 2em; }
+.ux-cols li, .it-cols li, .govt-cols li {
+  list-style-type: circle; }
+.ux-cols p, .ux-cols li, .it-cols p, .it-cols li, .govt-cols p, .govt-cols li {
   font-size: 0.8em;
   font-weight: 300;
-  line-height: 1.8em;
-  padding-bottom: 2em; }
+  line-height: 1.8em; }
+.ux-cols .page-subtext, .it-cols .page-subtext, .govt-cols .page-subtext {
+  font-size: 1.2em; }
 
 .ux-cols h3 {
   color: #29995e !important; }
 
 .it-cols h3 {
   color: #484977 !important; }
+
+.govt-cols h3, .govt-cols h5 {
+  color: #299499 !important; }
 
 /* Footer */
 #footer {
