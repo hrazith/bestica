@@ -6,6 +6,12 @@
 
 (function($) {
 
+	$("#banner").click(function() {
+		alert("clicked");
+		window.location = $(this).find("a").attr("href");
+		return false;
+	});
+
 	skel
 		.breakpoints({
 			xlarge: '(max-width: 1680px)',

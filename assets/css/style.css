@@ -2416,7 +2416,7 @@ body.is-menu-visible #menu {
           font-size: 0.8em;
           padding: 0 1.5em;
           font-weight: 300; }
-          #header nav > ul > li > a:hover {
+          #header nav > ul > li > a:hover, #header nav > ul > li > a.current {
             color: #ef6830; }
           #header nav > ul > li > a.menuToggle {
             outline: 0;
@@ -2442,6 +2442,72 @@ body.is-menu-visible #menu {
           margin-left: 0; }
 
 /* Banner */
+#banner2 {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center; }
+  #banner2 .inner {
+    margin: 6em auto; }
+  #banner2 h3 {
+    font-size: 0.8em;
+    padding: 0.35em 1em;
+    margin-bottom: .4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.025em; }
+  #banner2 p {
+    line-height: 1.8em;
+    padding: 0.8em 3em 0 3em;
+    font-size: .8em;
+    margin-bottom: 8em;
+    font-weight: 300; }
+    #banner2 p a {
+      color: inherit; }
+  @media screen and (max-width: 736px) {
+    #banner2 {
+      padding: 7em 3em 5em 3em;
+      height: auto;
+      min-height: 0; }
+      #banner2 h2 {
+        font-size: 1.25em; }
+      #banner2 br {
+        display: none; }
+      #banner2 .more {
+        display: none; } }
+  #banner2 .job-seeker {
+    background: #fef9e7;
+    height: 5em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding-top: 1em; }
+    #banner2 .job-seeker p {
+      text-align: center;
+      font-size: 0.8em;
+      width: 100%; }
+      #banner2 .job-seeker p .more {
+        background: #ef6830;
+        color: #ffffff;
+        font-size: 0.9em;
+        height: 2em;
+        border-radius: 4px;
+        text-align: center;
+        padding: 0.5em 1em;
+        z-index: 1;
+        margin-left: 0.8em; }
+
 #banner {
   display: -moz-flex;
   display: -webkit-flex;
@@ -2605,10 +2671,10 @@ body.is-loading #banner:after {
 /* Main */
 #main > header {
   padding: 12em 0 10em 0;
-  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-  background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+  background-image: -moz-linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5)), url("../../images/banner.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5)), url("../../images/banner.jpg");
+  background-image: -ms-linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5)), url("../../images/banner.jpg");
+  background-image: linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5)), url("../../images/banner.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2643,8 +2709,8 @@ body.is-mobile #main > header {
 
 /* Footer */
 #footer {
-  padding: 6em 0 4em 0;
-  background-color: #ebebeb;
+  padding: 3em 0 1em 0;
+  background-color: rgba(74, 74, 74, 0.9);
   text-align: center; }
   #footer .site-map li {
     display: inline-block;

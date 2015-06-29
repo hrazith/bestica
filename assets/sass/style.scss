@@ -1521,7 +1521,7 @@
 						padding: 0 1.5em;
 						font-weight: 300;
 
-						&:hover {
+						&:hover, &.current {
 							color: _palette(bestica,accent);
 						}
 
@@ -1565,6 +1565,81 @@
 	}
 
 /* Banner */
+	#banner2 {
+		@include vendor('display', 'flex');
+		@include vendor('flex-direction', 'column');
+		@include vendor('justify-content', 'center');
+		height: 100vh;
+		text-align: center;
+		.inner {
+			margin: 6em auto;
+		}
+		h3 {
+			font-size: 0.8em;
+			padding: 0.35em 1em;
+			margin-bottom: .4em;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: _size(letter-spacing-alt)-.2;
+		}
+		p {
+    		line-height: 1.8em;
+			padding: 0.8em 3em 0 3em;
+			font-size: .8em;
+			margin-bottom: 8em;
+			font-weight: 300;
+
+			a {
+				color: inherit;
+			}
+		}
+		@include breakpoint(small) {
+			@include padding(7em, 3em);
+			height: auto;
+			min-height: 0;
+
+			h2 {
+				font-size: 1.25em;
+			}
+
+			br {
+				display: none;
+			}
+
+			.more {
+				display: none;
+			}
+		}
+
+		.job-seeker {
+			background: _palette(accent4, bg);
+			height: 5em;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			margin: 0;
+			padding-top: 1em;
+			p {
+				text-align: center;
+				font-size: 0.8em;
+				width: 100%;
+				.more {
+					background: _palette(bestica, accent);
+					color: #ffffff;
+					font-size: 0.9em;
+					height: 2em;
+					border-radius: 4px;
+					text-align: center;
+					padding: 0.5em 1em;
+					z-index: 1;
+					margin-left: 0.8em;
+				}
+
+
+			}
+		}
+
+	}
 
 	#banner {
 		@include vendor('display', 'flex');
@@ -1768,7 +1843,7 @@
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5))', 'url("../../images/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1823,8 +1898,8 @@
 /* Footer */
 
 	#footer {
-		@include padding(6em, 0);
-		background-color: darken(_palette(bg), 8);
+		@include padding(3em, 0);
+		background-color: darken(transparentize(_palette(fg), 0.1), 8);
 		text-align: center;
 
 		.site-map {
