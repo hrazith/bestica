@@ -2710,6 +2710,11 @@ body.is-loading #banner:after {
     background-image: -webkit-linear-gradient(top, rgba(16,190,197,0.8), rgba(16,190,197,0.8));
     background-image: -ms-linear-gradient(top, rgba(16,190,197,0.8), rgba(16,190,197,0.8));
     background-image: linear-gradient(top, rgba(16,190,197,0.8), rgba(16,190,197,0.8)); }
+  #main > header.about-page {
+    padding: 7em 8em 2em 8em; }
+    #main > header.about-page h2 {
+      color: #ef6830;
+      font-size: 2.1em; }
   #main > header h2 {
     font-size: 1.75em;
     margin: 0 0 0.5em 0; }
@@ -2743,15 +2748,15 @@ body.is-mobile #main > header {
   font-size: 1.2em;
   line-height: 1.7em; }
 
-.ux-cols p, .it-cols p, .govt-cols p {
+.ux-cols p, .it-cols p, .govt-cols p, .about-cols p {
   padding-bottom: 2em; }
-.ux-cols li, .it-cols li, .govt-cols li {
+.ux-cols li, .it-cols li, .govt-cols li, .about-cols li {
   list-style-type: circle; }
-.ux-cols p, .ux-cols li, .it-cols p, .it-cols li, .govt-cols p, .govt-cols li {
+.ux-cols p, .ux-cols li, .it-cols p, .it-cols li, .govt-cols p, .govt-cols li, .about-cols p, .about-cols li {
   font-size: 0.8em;
   font-weight: 300;
   line-height: 1.8em; }
-.ux-cols .page-subtext, .it-cols .page-subtext, .govt-cols .page-subtext {
+.ux-cols .page-subtext, .it-cols .page-subtext, .govt-cols .page-subtext, .about-cols .page-subtext {
   font-size: 1.2em; }
 
 .ux-cols h3 {
@@ -2762,6 +2767,23 @@ body.is-mobile #main > header {
 
 .govt-cols h3, .govt-cols h5 {
   color: #299499 !important; }
+
+.about-cols h3, .about-cols h5 {
+  color: #ef6830 !important; }
+
+.caption {
+  font-size: 0.7em;
+  font-weight: 300;
+  margin-bottom: 8em !important; }
+
+.team-img {
+  margin: 8em 0 1em 0 !important; }
+
+.ourstory {
+  padding-right: 0.8em; }
+
+.ceo .caption {
+  margin-bottom: 1em !important; }
 
 /* Footer */
 #footer {
