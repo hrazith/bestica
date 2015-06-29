@@ -2671,15 +2671,36 @@ body.is-loading #banner:after {
 /* Main */
 #main > header {
   padding: 12em 0 10em 0;
-  background-image: -moz-linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5)), url("../../images/banner.jpg");
-  background-image: -webkit-linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5)), url("../../images/banner.jpg");
-  background-image: -ms-linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5)), url("../../images/banner.jpg");
-  background-image: linear-gradient(top, rgba(39,196,113,0.5), rgba(39,196,113,0.5)), url("../../images/banner.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center; }
+  #main > header.ux-page, #main > header.it-page, #main > header.govt-page {
+    color: #fff; }
+    #main > header.ux-page h2, #main > header.it-page h2, #main > header.govt-page h2 {
+      color: #fff;
+      text-transform: uppercase; }
+    #main > header.ux-page p, #main > header.it-page p, #main > header.govt-page p {
+      padding: 0 8em;
+      font-weight: 300;
+      font-size: 1.2em;
+      line-height: 1.5em; }
+  #main > header.ux-page {
+    background-image: -moz-linear-gradient(top, rgba(39,196,113,0.8), rgba(39,196,113,0.8));
+    background-image: -webkit-linear-gradient(top, rgba(39,196,113,0.8), rgba(39,196,113,0.8));
+    background-image: -ms-linear-gradient(top, rgba(39,196,113,0.8), rgba(39,196,113,0.8));
+    background-image: linear-gradient(top, rgba(39,196,113,0.8), rgba(39,196,113,0.8)); }
+  #main > header.it-page {
+    background-image: -moz-linear-gradient(top, rgba(79,81,149,0.8), rgba(79,81,149,0.8));
+    background-image: -webkit-linear-gradient(top, rgba(79,81,149,0.8), rgba(79,81,149,0.8));
+    background-image: -ms-linear-gradient(top, rgba(79,81,149,0.8), rgba(79,81,149,0.8));
+    background-image: linear-gradient(top, rgba(79,81,149,0.8), rgba(79,81,149,0.8)); }
+  #main > header.govt-page {
+    background-image: -moz-linear-gradient(top, rgba(16,190,197,0.8), rgba(16,190,197,0.8));
+    background-image: -webkit-linear-gradient(top, rgba(16,190,197,0.8), rgba(16,190,197,0.8));
+    background-image: -ms-linear-gradient(top, rgba(16,190,197,0.8), rgba(16,190,197,0.8));
+    background-image: linear-gradient(top, rgba(16,190,197,0.8), rgba(16,190,197,0.8)); }
   #main > header h2 {
     font-size: 1.75em;
     margin: 0 0 0.5em 0; }
@@ -2706,6 +2727,24 @@ body.is-loading #banner:after {
 
 body.is-mobile #main > header {
   background-attachment: scroll; }
+
+/* Page Specific */
+.page-subtext {
+  color: #a9a9a9;
+  font-size: 1.2em;
+  line-height: 1.7em; }
+
+.ux-cols p, .it-cols p {
+  font-size: 0.8em;
+  font-weight: 300;
+  line-height: 1.8em;
+  padding-bottom: 2em; }
+
+.ux-cols h3 {
+  color: #29995e !important; }
+
+.it-cols h3 {
+  color: #484977 !important; }
 
 /* Footer */
 #footer {
